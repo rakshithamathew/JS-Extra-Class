@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel=stylesheet href="styles.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>1 . Define javaScript</h2>
+    <p>
+      JavaScript is a dynamic programming language that is used for creating
+      dynamic pages, in web & mobile applications, for game development and to
+      make the web page interactive for the user. It is used for client-side
+      scripting to perform some functionality behind the browser and allows to
+      implement dynamic features on web pages that cannot be achieved with only
+      HTML and CSS.
+    </p>
+<hr>
+    <h2>2. JavaScript Runtime Environment</h2>
+    <img src="https://miro.medium.com/max/1400/0*0WHvNqHCfpOtd4GB" />
+    <div>
+      The JavaScript runtime environment provides access to built-in libraries
+      and objects that are available to a program so that it can interact with
+      the outside world and make the code work. In the context of a browser this
+      is comprised of the following elements:
+      <ol>
+        <li>
+          The JavaScript engine (which in turn is made up of the heap and the
+          call stack)
+        </li>
+        <li>Web APIs </li>
+        <li>The callback queue</li>
+        <li>The event loop</li>
+      </ol>
+      <p>The purpose of the JavaScript engine is to translate source code that developers write into machine code that allows a computer to perform specific tasks.
+        For the purpose of this article, we are going to focus on the V8 JavaScript engine.
+        <h3>a. Heap</h3>
+
+        The heap, also called the ‘memory heap’, is a section of unstructured memory that is used for the allocation of objects and variables.
+        </p>
+        <h3>b. The call stack</h3>
+        <p>
+            The call stack is a data structure that keeps track of where we are in the program and runs in a last-in, first-out way. Each entry in the stack is called a stack frame. This means that the frame at the top of the stack is the one the engine is focused on, and it will not move on to the next function unless the function above it has been removed from the stack.
+            As the JS engine steps into a function, it is pushed onto the stack. When a function returns a value or gets sent to the Web APIs, it is popped off the stack. If a function doesn’t explicitly return a value then the engine will return undefined and also pop the function off the stack. This is what is meant by the term “JavaScript runs synchronously”; it is single-threaded, so can only do one thing at a time.
+            </p>
+            <h3>c. The Web APIs</h3>
+            The Web APIs are not a part of the JavaScript engine, but they are part of the runtime environment provided by the browser. There are a large number of APIs available in modern browsers that allow us to a wide variety of things. Some of the most common categories of browser APIs let us:
+            Manipulate documents: One of the most common Web APIs used is the DOM API, which allows developers to manipulate HTML and CSS, letting us create, change and even remove HTML and dynamically apply styles to our web pages.
+            <hr>
+    </div>  
+    <h2>3. Js Engine</h2>
+    <p>The purpose of the JavaScript engine is to translate source code that developers write into machine code that allows a computer to perform specific tasks.
+      For the purpose of this article, we are going to focus on the V8 JavaScript engine.
+  <p>
+    Google chrome’s JavaScript V8 engine: <br>
+    Firstly, raw JavaScript file goes into the Parser. 
+
+    Parser: It checks for syntax and semantics. Parser is nothing but a lexical analysis that results into the breaking of code into tokens in order to understand their meanings and these tokens gets converted into Abstract Syntax Tree(AST).<br>
+    Abstract Syntax tree: It is a hierarchical tree like structure of program representation which allows interpreter to understand the program. This AST is initially goes to the Interpreter.<br>
+    Interpreter: It lets the AST to get converted into Byte code. In V8 engine, this process is known as Ignition but when some code gets repeated again and again.<br>
+  </p>
+  <img src="https://vteams.com/wp-content/uploads/2021/03/V8-Engine-Threads.png">
+  <hr>
+  <h2>4. Creation and Execution Phase</h2>
+  <h3>Creation Phase</h3>
+  <p>When the JavaScript engine executes a script for the first time, it creates the global execution context. During this phase, the JavaScript engine performs the following tasks:</p>
+  <ul>
+      <li>Create the global object i.e., window in the web browser or global in Node.js.</li>
+    <li>
+        Create the this object and bind it to the global object.</li>
+        <li>
+            Setup a memory heap for storing variables and function references.</li>
+            <li>
+                Store the function declarations in the memory heap and variables within the global execution context with the initial values as undefined.</li>
+  </ul>
+  <img src="https://www.javascripttutorial.net/wp-content/uploads/2019/12/javascript-execution-context-global-execution-context-in-creation-phase.png">
+  <h3>Execution Phase</h3>
+  <p>During the execution phase, the JavaScript engine executes the code line by line, assigns the values to variables,
+       and executes the function calls.</p>
+       <img src="https://www.javascripttutorial.net/wp-content/uploads/2019/12/javascript-execution-context-global-execution-context-in-execution-phase.png">
+       <p>For each function call, the JavaScript engine creates a new function execution context.
+
+        The function execution context is similar to the global execution context. But instead of creating the global object, the JavaScript engine creates the arguments object that is a reference to all the parameters of the function</p>
+        <center>
+            
+  <img src="https://www.javascripttutorial.net/wp-content/uploads/2019/12/javascript-execution-context-function-execution-context-in-creation-phase.png"> 
+  <img src="https://www.javascripttutorial.net/wp-content/uploads/2019/12/javascript-execution-context-function-execution-context-in-execution-phase.png">
+        </center>
+    </body>
+</html>
