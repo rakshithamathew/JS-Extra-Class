@@ -1,4 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-family: cursive;
     font-size: 20px;
+}
+pre{
+    font-weight: bold;
+    font-family: 20px;
 }

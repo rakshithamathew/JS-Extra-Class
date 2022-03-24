@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+    <h1>Conditional Operator</h1>
+    <p>Syntax:-</p>
+    <pre>
+        if (condition) {
+            //  block of code to be executed if the condition is true
+          }
+    </pre>
+    <h3>else statement:- </h3>
+    <pre>
+        if (condition) {
+            //  block of code to be executed if the condition is true
+          } else {
+            //  block of code to be executed if the condition is false
+          }
+    </pre>
+    <h3>if-else ladder</h3>
+    
+The if-else-if Ladder
+A common programming construct that is based upon nested ifs is the if-else-if ladder. 
+It looks like this
+<br><br>
+<img src="https://web1.eng.famu.fsu.edu/~haik/met.dir/hcpp.dir/notes.dir/cppnotes/img32.gif">
+<br><br>
+The conditional expressions are evaluated from the top downward. As soon as a true condition is found, the statement associated with it is executed, and the rest of the ladder is bypassed. If non of the conditions is true, then the final else statement will be executed. The final else often acts as a default condition; that is, if all other conditions tests fail, then the last else statement is performed. If there is no final else and all other conditions are false then no action will take place.
+    
+
+<h1>Revision Question</h1>
+<h2>1. Explain the difference between var let and const , explain with example?</h2>
+<table>
+  <thead>
+      <tr>
+          <th>var</th>
+          <th>let</th>
+          <th>const</th>
+      </tr>
+      
+  </thead>
+  <tbody>
+      <br>
+      <tr>
+          <td>The scope of a var variable is functional scope.</td>
+          <td>The scope of a let variable is block scope.</td>
+          <td>The scope of a const variable is block scope.</td>
+      </tr>
+      <tr>
+       <td>It can be updated and re-declared into the scope.</td>
+       <td>It can be updated but cannot be re-declared into the scope.</td>
+       <td>It cannot be updated or re-declared into the scope.</td>
+      </tr>
+      <tr>
+       <td>It can be declared without initialization.</td>
+       <td>It can be declared without initialization.</td>
+       <td>It cannot be declared without initialization.</td>
+      </tr>
+      <tr>
+          <td>It can be accessed without initialization as its default value is “undefined”.</td>
+          <td>It cannot be accessed without initialization, as it returns an error.</td>
+          <td>It cannot be accessed without initialization, as it cannot be declared without initialization.</td>
+      </tr>
+  </tbody>
+</table> 
+<h2>2. Explain JS execution</h2>
+<p>The purpose of the JavaScript engine is to translate source code that developers write into machine code that allows a computer to perform specific tasks.
+  For the purpose of this article, we are going to focus on the V8 JavaScript engine.
+<p>
+Google chrome’s JavaScript V8 engine: <br>
+Firstly, raw JavaScript file goes into the Parser. 
+
+Parser: It checks for syntax and semantics. Parser is nothing but a lexical analysis that results into the breaking of code into tokens in order to understand their meanings and these tokens gets converted into Abstract Syntax Tree(AST).<br>
+Abstract Syntax tree: It is a hierarchical tree like structure of program representation which allows interpreter to understand the program. This AST is initially goes to the Interpreter.<br>
+Interpreter: It lets the AST to get converted into Byte code. In V8 engine, this process is known as Ignition but when some code gets repeated again and again.<br>
+</p>
+<img src="https://vteams.com/wp-content/uploads/2021/03/V8-Engine-Threads.png">
+<br>
+<h2>3. Take a string variable age
+  a) if age less than 30 , print "Adult" , else "Old", use if else and ternary operator?
+  b) if age less than 15 , print "Young" , age greater than 15 but less than 30 print "Adult" else "Old" by using if else ladder?</h2>
+<br>
+  <b style="font-size: larger;">
+  <pre>
+    
+  a)  var age=10;
+        if(age<30) {
+            console.log('Adult');
+        }else{
+            console.log('Old');                   //Adult
+        }
+
+      
+
+        var age=48;
+        console.log(age<30 ? 'Adult' : 'Old');      //op: old
+
+        
+        
+        b)  var age=56;
+        if(age<15){
+            console.log('Young');
+        }else if(age>15 && age<30){
+            console.log('Adult');
+        }else{
+            console.log('Old');                     //op: Old
+        }
+
+        
+  </pre>
+</b>
+<h2>4. write a program
+  Use switch case and create Week calendar Monday - print 0 , Tuesday - print 1 and so on Sunday - print 6</h2>
+  <b style="font-size: larger;">
+    <pre >
+      var day = monday
+
+        switch(day){
+            case monday:
+              return "0";
+              break;
+            case Tuesday:
+                return "1";
+                break;
+            case Wensday:
+                return "2";
+                break;
+            case thursday:
+                return "3";
+                break;
+            case friday:
+                return "4";
+                break;
+            case saturday:
+                return "5";
+                break;
+            case sunday:
+                return "6";
+                break;
+        }
+    </pre>
+  </b>
+  <h2>5. Define Hositng</h2>
+  <p>Variables defined with let and const are hoisted to the top of the block, but not initialized.
+
+    Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
+    
+    Using a let variable before it is declared will result in a ReferenceError.</p>
+    
+<p>//ReferenceError :-</p>
+        <pre>   Person = "John";
+let Person;</pre>
+<p>//Syntax Error :-</p>
+<p>Using a const variable before it is declared, is a syntax errror, so the code will simply not run</p>
+<pre>       Person = "John";
+    const Person;</pre>
+</body>
+</html>
