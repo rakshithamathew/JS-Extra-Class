@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href="styles.css">
+    <title>JS-5</title>
+</head>
+<body>
+    <h1 style="text-decoration: underline;">Function in JavaScript</h1><br>
+    <h2>1. Define:</h2>
+    <pre>
+        A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+
+        Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+        
+        The parentheses may include parameter names separated by commas:
+        (parameter1, parameter2, ...)
+        
+        The code to be executed, by the function, is placed inside curly brackets: {}
+    </pre>
+    <h2>2. First Class Function</h2>
+    <p>First-Class Function: A programming language is said to have First-class functions if functions in that language are treated like other variables. So the functions can be assigned to any other variable or passed as an argument or can be returned by another function.</p>
+    <pre>
+        const Geek = (a, b) => {
+            return (a + " " + b);
+        }
+          
+        document.write(Geek("Rakshitha", "M"));   //op: Rakshitha M
+    </pre>
+    <h2>3. Higher Order Function</h2>
+    <p>Higher-order functions in JavaScript are a special category of functions that either accept functions as an argument or return functions.
+
+        On the other side, if the function uses only primitives or objects as arguments or return values, these functions are first-order.</p>
+   <h2>4. Callback Function</h2>
+   <p>A callback is a function passed as an argument to another function
+
+    This technique allows a function to call another function
+    
+    A callback function can run after another function has finished</p>
+    <pre>
+        function myFirst() {
+            myDisplayer("Hello");
+          }
+          
+          function mySecond() {
+            myDisplayer("Goodbye");
+          }
+          
+          myFirst();
+          mySecond();       //output:Goodbye
+    </pre> 
+    <h2>5. Return Statement</h2>
+    <p>The return statement stops the execution of a function and returns a value</p>
+    <pre>
+        function myFunction() {
+            return Math.PI;
+          }                         //output: 3.141592653589793
+    </pre>
+    <h2>6. Block Statment</h2>
+    <p> It allows you to use multiple statements where JavaScript expects only one statement.</p>
+    <pre>
+        { 
+            statement_1 
+            statement_2
+             .    .    . 
+            statement_n 
+            } 
+    </pre>
+    <h2>7. Scope Chain</h2>
+    <p>Whenever our code tries to access a variable during the function call, it starts the searching from local variables</p>
+    <pre>
+        {
+        let greeting = 'Hello World!';
+        var lang = 'English';
+        console.log(greeting); // Prints 'Hello World!'
+      }
+      // Prints 'English'
+      console.log(lang);
+      // Uncaught ReferenceError: greeting is not defined
+      console.log(greeting);
+    </pre>
+</body>
+</html>
