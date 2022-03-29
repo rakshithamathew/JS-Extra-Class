@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>ARRAY</h2>
+    <pre>
+        An array is a collection of items stored at contiguous memory locations.
+         The idea is to store multiple items of the same type together
+    </pre>
+    <h2>MAP</h2>
+    <pre>
+        The map() method is used for creating a new array from an existing one, 
+        applying a function to each one of the elements of the first array.
+    </pre>
+    <pre>
+        const numbers = [1, 2, 3, 4];
+        const doubled = numbers.map(item => item * 2);
+        console.log(doubled);                   op: // [2, 4, 6, 8]
+    </pre>
+    <h2>FILTER</h2>
+    <pre>
+        The filter() method takes each element in an array and it applies a conditional statement against it. If this conditional returns true, the element gets pushed to the output array. 
+        If the condition returns false, the element does not get pushed to the output array.
+    </pre>
+    <pre>
+        const numbers = [1, 2, 3, 4];
+        const evens = numbers.filter(item => item % 2 === 0);
+        console.log(evens); // [2, 4]
+    </pre>
+    <h2>REDUCE</h2>
+    <pre>
+        The reduce() method reduces an array of values down to just one value. 
+        To get the output value, it runs a reducer function on each element of the array.
+    </pre>
+    <pre>
+        const numbers = [1, 2, 3, 4];
+        const sum = numbers.reduce(function (result, item) {
+        return result + item;
+        }, 0);
+        console.log(sum); // 10
+    </pre>
+    <h2>PUSH</h2>
+    <pre>
+        push() is used to add an element/item to the end of an array.
+    </pre>
+    <img src="https://linuxhint.com/wp-content/uploads/2021/08/image1-1536x517.jpg" style="width: 500px;">
+    <h2>POP</h2>
+    <pre>
+        The pop() function is used to delete the last element/item of the array.
+    </pre>
+    <img src="https://linuxhint.com/wp-content/uploads/2021/08/image3-1536x568.jpg" style="width: 500px;">
+    <h2>SHIFT</h2>
+    <pre>
+        The shift() function directly modifies the JavaScript array with which you are working. 
+        shift() returns the item you have removed from the array.
+
+        SYNTAX:
+        array_name.shift()
+    </pre>
+    <h2>UNSHIFT</h2>
+    <pre>
+        unshift() function adds one or more elements to the start of an array. The unshift() function changes the array and returns the length of the new array.
+
+        Here’s the syntax for the unshift() function:
+        array_name.unshift(item_one, item_two, …)
+    </pre>
+    <h2>SOME</h2>
+    <pre>
+        The some() method tests whether at least one element in 
+        the array passes the test implemented by the provided function.
+    </pre>
+    <pre>
+        const array = [1, 2, 3, 4, 5];
+
+        // checks whether an element is even
+        const even = (element) => element % 2 === 0;
+
+           console.log(array.some(even));
+            // expected output: true
+
+    </pre>
+    <h2>EVERY</h2>
+    <pre>
+        The every() method tests whether all elements in the array pass the test implemented by the provided function. 
+        It returns a Boolean value.
+    </pre>
+    <pre>
+        const array1 = [1, 30, 39, 29, 10, 13];
+
+        console.log(array1.every(isBelowThreshold));
+        // expected output: true
+
+    </pre>
+    <h2>SPLICE</h2>
+    <pre>
+        The splice() method adds and/or removes array elements.
+
+        The splice() method overwrites the original array.
+    </pre>
+    <pre>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.splice(2, 1, "Lemon", "Kiwi");
+    </pre>
+    <h2>SLICE</h2>
+    <pre>
+        The slice() method returns selected elements in an array, as a new array.
+
+        The slice() method selects from a given start, up to a (not inclusive) given end.
+
+        The slice() method does not change the original array.
+    </pre>
+    <pre>
+        const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        const myBest = fruits.slice(-3, -1);
+    </pre>
+</body>
+</html>
