@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>1. This keyword</h2>
+    <pre>
+        This keyword points to the current object ie. most of the time it points to the global object only means the window object.
+
+            I/p: 
+            var obj={
+                name: "prepbytes",
+                age: 20,
+                printDetails: function(){
+                    console.log("name="+this.name+" and age"+this.age)
+                }
+            }
+
+            obj.printDetails();             // O/p: name=rahul and age=34
+    </pre>
+    <h2>2. Spread Operator</h2>
+    <pre>
+        What is the spread operator in JavaScript?
+        The spread operator is a new addition to the set of operators in JavaScript ES6. It takes in an iterable (e.g an array) and expands it into individual elements. The spread operator is commonly used to make shallow copies of JS objects. Using this operator makes 
+        the code concise and enhances its readability.
+    </pre>
+    <pre>
+        const arr1 = [1,8,29,0,9];
+        const arr2 = [0,9,7,3,1];
+        const arr3 = [...arr1...arr2];
+        console.log(arr3);              //o/p: [1,8,29,0,9,0,9,7,3,1]
+    </pre>
+    <h2>3. Define Object</h2>
+    <pre>
+        An object type is simply a collection of properties in the form of name and value pairs. Notice from the list that null 
+        and undefined are primitive JavaScript data types,each being a data type containing just one value.
+    </pre>
+    <pre>
+        Example: creating object 
+        
+        class Vehicle {
+            constructor(name, maker, engine) {
+              this.name = name;
+              this.maker =  maker;
+              this.engine = engine;
+            }
+          }
+            
+          let car1 = new Vehicle('GT', 'BMW', '1998cc');
+            
+          console.log(car1.name); 
+    </pre>
+</body>
+</html>

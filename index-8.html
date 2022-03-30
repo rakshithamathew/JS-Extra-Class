@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: black; color:aliceblue">
+    <h1>1. Define Strings</h1>   
+ <p>String is a Collection of Characters Enclosed with a Single Qoutes or Double Qoutes</p>
+ <h2>2. String Length</h2>
+ <pre>
+    EX :  let myStr = "Rakshitha M";
+    let len = myStr.length;
+    console.log(len); 
+                            // o/p : 9
+ </pre>
+
+ <h2>3. Concatination </h2>
+ <p>It concat two string.</p>
+ <pre>
+     var t1="Rakshitha";
+     var t2="M";
+     var t3=t1.concat(" ",t2);
+     console.log(t3);         //o/p: Rakshitha M
+ </pre>
+ <h2>4. Trim</h2>
+<p>It removes unnecessary spaces.</p>
+<pre>
+    let str="           Rakshitha";
+    console.log(str.len);
+    let tr = str.trim(); //20
+    console.log(tr);        //Rakshitha
+    console.log(tr.len);         //9
+</pre>
+<h2>5. Reverse And Join</h2>
+<p>It reverse the string & It converts array to string.</p>
+<pre>
+    let rev1 = myStr.split("").reverse();
+    console.log(rev1);  // ['e','x','t','r','a']
+    let rev2 = myStr.split("").reverse().join("");
+    console.log(rev2);              // o/p: artxe
+</pre>
+
+
+</body>
+</html>
