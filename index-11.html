@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Revision</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>JS-Revision</h1>
+        <h2>1.</h2>
+        <pre>
+            let arr = [23, 45, 67, 78, 91]
+        </pre>
+        Using map,
+        <pre>
+            let result = arr.map(num => num + 10);
+            console.log(result);
+        </pre>
+        Using forEach,
+        <pre>
+            let new = [];
+            arr.forEach(num => new.push(num + 10));
+            console.log(new);
+        </pre>
+    </div> <br>
+    <div>
+        <h2>2.</h2>
+        <pre>
+            let arr = [23, 45, 67, 78, 91];
+
+            let result = arr.filter(num => num < 65);
+            console.log(result.length);
+        </pre>
+    </div> <br>
+    <div>
+        <h2>3. </h2>
+        <pre>
+            let arr = [23, 45, 67, 78, 91];
+
+            let result = arr.reduce((sum, num) => {
+                        sum += num;
+                        return sum;
+                        }, 0);
+            console.log(result);
+        </pre>
+    </div> <br>
+    <div>
+        <h2>4.</h2>
+        <pre>
+            let str = "Peter is a good friend of Mike. Peter is working in a IT company in Australia".;
+
+            console.log(str.replaceAll("Peter", "John"));
+        </pre>
+    </div> <br>
+    <div>
+        <h2>5.</h2>
+        <pre>
+            let str = "Hello this is me";
+            console.log(str.split(' ').reverse().join(' '));
+        </pre>
+    </div> <br>
+    <div>
+        <h2>6. </h2>
+        <p>There are 4 ways to create objects in JS :</p>
+        <ul>
+            <li>Object Literals</li>
+            <li>New operator or constructor.</li>
+            <li>Object.create method.</li>
+            <li>Object using constructor:</li>
+        </ul>
+        <h4>Object Literals:</h4>
+        <p>An object literal, also called an object initializer, is a comma-separated set of paired names and values.</p>
+        <pre>
+            var obj={
+                name: "Rakshitha M",
+                age: 20,
+            }
+        </pre>
+        <h4>New operator or constructor:</h4>
+        <p>If you call a function using a new operator, the function acts as a constructor and returns an object.</p>
+        <pre>
+            function Car(model, color) {
+                this.model = model;
+                this.color = color;
+            }
+
+            var car1 = new Car('SUV', 'green');
+            car1();
+        </pre>
+        <h4>Object.create method:</h4>
+        <p>Object.create() method, which allows you to specify the prototype object and the properties.</p>
+        <pre>
+            var Car = {
+                model: 'i10',
+                color: 'black'
+            }
+            // You can use the Car object as a prototype to create another object.
+            var car2 = Object.create(Car);
+        </pre>
+        <h4>Object using constructor:</h4>
+        <pre>
+            var obj=new Object();
+            obj.name="Raksha";
+            obj.age="22";
+        </pre>
+    </div> <br>
+    <div>
+        <h2>7.</h2>
+        <pre>
+            var obj = {
+                name: "Sharan",
+                age: 32,
+                salary: 540300
+            }
+
+            console.log(Object.keys(obj)); // [name, age, salary]
+            console.log(Object.values(obj)); // [Sharan, 32, 540300]
+        </pre>
+    </div> <br>
+    <div>
+        <h2>8.</h2>
+        <pre>
+            function greeting () {
+                console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+            }
+            const john = {
+                name: 'Rakshitha',
+                age 24
+            }
+            const jane = {
+                name: 'P',
+                age 22
+            }
+        </pre>
+        <h4>call() and apply():</h4>
+        <p>Both sets <i>this</i> keyword inside the function and immediately executes that function. Only the difference is <b>apply()</b> methods accpets an array of arguments instead of comma seperated values.</p>
+        <pre>
+            function.call(thisArg, Arg1, Arg2);
+            function.apply(thisArg, [agrumentsArr])
+
+            Ex:
+            greeting.call(john); // "Hi, I am John and I am 24 years old"
+            greeting.apply(jane); // "Hi, I am Jane and I am 22 years old"
+        </pre>
+        <h4>bind():</h4>
+        <p>It creates a new function and sets the <i>this</i> keyword to the specified object.</p>
+        <pre>
+            const greetingJohn = greeting.bind(john);
+            greetingJohn(); // "Hi, I am John and I am 24 years old"
+            OR
+            greeting.bind(john)();
+        </pre>
+    </div> <br>
+    <div>
+        <h2>9.</h2>
+        <ol>
+            <li>Prototypes are the means of inheritance in JS.</li>
+            <li>The Prototype of ana Object could also have prototype object and this continues until we reach the top level, where no prototype object is there.</li>
+        </ol>
+        <p>This is called Prototype Chaining.</p>
+        <pre>
+            // pocket -> bed -> table -> head
+
+            let head = {
+                glasses: 1
+            }
+
+            let table = {
+                pen: 3,
+                __proto__: head
+            }
+
+            let bed = {
+                sheet: 1,
+                pillow: 2,
+                __proto__: table
+            }
+
+            let pockets = {
+                money: 2000,
+                __proto__: bed
+            }
+        </pre>
+    </div> <br>
+</body>
+</html>
