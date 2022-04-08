@@ -53,7 +53,7 @@
         <pre>
             let str = "Peter is a good friend of Mike. Peter is working in a IT company in Australia".;
 
-            console.log(str.replaceAll("Peter", "John"));
+            console.log(str.replaceAll("Peter", "Rakshitha"));
         </pre>
     </div> <br>
     <div>
@@ -127,32 +127,33 @@
             function greeting () {
                 console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
             }
-            const john = {
+            const Rakshitha = {
                 name: 'Rakshitha',
                 age 24
             }
-            const jane = {
-                name: 'P',
+            const Prepbytes = {
+                name: 'Prepbytes',
                 age 22
             }
         </pre>
         <h4>call() and apply():</h4>
-        <p>Both sets <i>this</i> keyword inside the function and immediately executes that function. Only the difference is <b>apply()</b> methods accpets an array of arguments instead of comma seperated values.</p>
+        <p>Both sets "this" keyword inside the function and immediately executes that function. 
+            Only the difference is apply() methods accpets an array of arguments instead of comma seperated values.</p>
         <pre>
             function.call(thisArg, Arg1, Arg2);
             function.apply(thisArg, [agrumentsArr])
 
             Ex:
-            greeting.call(john); // "Hi, I am John and I am 24 years old"
-            greeting.apply(jane); // "Hi, I am Jane and I am 22 years old"
+            greeting.call(Rakshitha); // "Hi, I am Rakshitha and I am 24 years old"
+            greeting.apply(Prepbytes); // "Hi, I am Prepbytes and I am 22 years old"
         </pre>
         <h4>bind():</h4>
-        <p>It creates a new function and sets the <i>this</i> keyword to the specified object.</p>
+        <p>It creates a new function and sets the "this" keyword to the specified object.</p>
         <pre>
-            const greetingJohn = greeting.bind(john);
-            greetingJohn(); // "Hi, I am John and I am 24 years old"
+            const greetingRakshitha = greeting.bind(Rakshitha);
+            greetingRakshitha(); // "Hi, I am Rakshitha and I am 24 years old"
             OR
-            greeting.bind(john)();
+            greeting.bind(Rakshitha)();
         </pre>
     </div> <br>
     <div>
@@ -163,26 +164,26 @@
         </ol>
         <p>This is called Prototype Chaining.</p>
         <pre>
-            // pocket -> bed -> table -> head
+            // pocket -> water -> milk -> coffee
 
-            let head = {
-                glasses: 1
+            let coffee = {
+                cup: 1
             }
 
-            let table = {
-                pen: 3,
-                __proto__: head
+            let milk = {
+                liter: 3,
+                __proto__: coffee
             }
 
-            let bed = {
-                sheet: 1,
-                pillow: 2,
-                __proto__: table
+            let water = {
+                glass: 1,
+                liter: 2,
+                __proto__: milk
             }
 
-            let pockets = {
+            let Price = {
                 money: 2000,
-                __proto__: bed
+                __proto__: water
             }
         </pre>
     </div> <br>
